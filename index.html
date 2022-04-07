@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bellybutton Biodiversity</title>
+  <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous"/>
+    <link rel="stylesheet" href="Resources/style.css">
+  
+</head>
+
+<body class="bg-dark">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center" >
+        <h1>Belly Button Biodiversity Dashboard</h1>
+        <p>Use the interactive charts below to explore the dataset</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2">
+        <div class="well">
+          <h5>Test Subject ID No.:</h5>
+          <!-- <select id="selDataset"></select> -->
+          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Demographic Info</h3>
+          </div>
+          <div id="sample-metadata" class="panel-body"></div>
+        </div>
+      </div>
+      <div class="col-md-5"class="bg-dark">
+        <div id="bar"></div>
+        <h6>Bar Chart Description </h6>
+        <p>For each individual sample ID selected, the bar chart will show the top 10 bacteria’s found in the individuals belly button. </p>
+      </div>
+      <div class="col-md-5"class="bg-dark">
+        <div id="gauge"></div>
+        <h6>Gauge Chart Description </h6>
+        <p>For each individual sample ID selected, the gauge chart will show the number of times each week the individual washes their belly button. </p>
+        
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12"class="bg-dark">
+        <div id="bubble"></div>
+        <h6>Bubble Chart Description </h6>
+        <p>For each individual sample ID selected, the bubble chart will show the individuals bacteria values and represent the bacteria's prevalence by the size of the circle/bubble marker. </p>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="charts.js"></script>
+
+</body>
+
+</html>
